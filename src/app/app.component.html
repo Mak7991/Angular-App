@@ -1,0 +1,119 @@
+<div class="sticky top-0 bg-white box-shadow z-index-1200">
+  <nav class="navbar navbar-expand-lg navbar-info bg-white shadow">
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand d-flex align-items-center" routerLink="/">
+        <img
+          height="40px"
+          src="https://angular.io/assets/images/logos/angular/shield-large.svg"
+        />
+        <span>NGULAR</span>
+      </a> -->
+      <a class="navbar-brand d-flex align-items-center" routerLink="/">
+        <header class="brand-name d-flex align-items-center">
+          <img
+            class="brand-logo"
+            src="assets/logo.jpeg"
+            alt="logo"
+            aria-hidden="true"
+            height="70px"
+          />
+          <!-- <h4>Homes</h4> -->
+        </header>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a
+              class="nav-link font-weight-bolder active"
+              aria-current="page"
+              routerLink="/"
+              >Todos</a
+            >
+          <!-- </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bolder" routerLink="/home"
+              >Home Properties</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bolder" routerLink="/movies"
+              >Movies App</a
+            >
+          </li> -->
+        </ul>
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li *ngIf="!this.auth.loggedIn()" class="nav-item">
+            <a class="nav-link font-weight-bolder" routerLink="/login">Login</a>
+          </li>
+          <li *ngIf="!this.auth.loggedIn()" class="nav-item">
+            <a class="nav-link font-weight-bolder" routerLink="/register"
+              >Register</a
+            >
+          </li>
+          <li *ngIf="this.auth.loggedIn()" class="nav-item cursor-pointer">
+            <a (click)="this.auth.logOut()" class="nav-link font-weight-bolder cursor-pointer">Logout</a>
+          </li>
+        </ul>
+        <!-- <button
+          class="btn btn-light d-flex align-items-center gap-2"
+          type="submit"
+          routerLink="/cart"
+        >
+          <img
+            class="brand-logo"
+            src="assets/shopping-cart.png"
+            alt="logo"
+            aria-hidden="true"
+            height="25px"
+          />
+          Cart
+        </button> -->
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="container pt-3 pb-3 min-height-100">
+  <router-outlet>
+    <ngx-spinner
+      bdColor="rgba(51,51,51,0.8)"
+      size="medium"
+      color="#fff"
+      type="ball-scale-multiple"
+    >
+      <p style="font-size: 20px; color: white">Loading...</p>
+    </ngx-spinner>
+    <!-- <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+      <p style="font-size: 20px; color: white">Loading...</p>
+    </ngx-spinner> -->
+    <!-- <app-spinner></app-spinner> -->
+  </router-outlet>
+</div>
+
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<footer
+  class="text-center text-dark shadow mt-5"
+  style="background-color: #f1f1f1"
+>
+  <div class="text-center text-dark p-3">
+    <a
+      class="navbar-brand d-flex align-items-center justify-content-center"
+      routerLink="/"
+    >
+      © {{ currentYear }} Copyright: Angular App
+    </a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- End of .container -->

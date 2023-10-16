@@ -1,0 +1,7 @@
+.checkbox {
+  height: 16px;
+  width: 16px;
+}
+.strike {
+  text-decoration: line-through;
+}

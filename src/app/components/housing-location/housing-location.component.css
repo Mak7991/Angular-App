@@ -1,0 +1,30 @@
+.listing {
+    background: #fff;
+    border-radius: 10px;
+    padding-bottom: 30px;
+  }
+  .listing-heading {
+    color: #000;
+    padding: 10px 20px 0 20px;
+  }
+  .listing-photo {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  .listing-location {
+    padding: 10px 20px 20px 15px;
+  }
+  .listing-location::before {
+    content: url("/assets/location-pin.svg") / "";
+  }
+  
+  section.listing a {
+    padding-left: 20px;
+    text-decoration: none;
+  }
+  section.listing a::after {
+    content: "\203A";
+    margin-left: 5px;
+  }

@@ -1,0 +1,13 @@
+.movie_name{
+    font-weight: 700;
+    text-decoration: none;
+}
+.movie-card{
+   min-height: 190px;
+}
+.textStyle{
+    color: green;
+}
+.textStyle2{
+    color: red;
+}

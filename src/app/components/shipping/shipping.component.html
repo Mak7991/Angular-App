@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="d-flex mb-4 mt-3">
+        <span><a class="nav-link mt-2 me-2" routerLink="/movies">Back</a></span>
+        <h2>Shipping Prices</h2>
+    </div>
+    <div class="shipping-item p-3 mb-3 shadow d-flex justify-content-between " *ngFor="let shipping of shippingCosts | async">
+        <span>{{ shipping.type }}</span>
+        <span>&nbsp; {{ shipping.price | currency }}</span>
+    </div>
+</div>

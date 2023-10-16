@@ -1,0 +1,31 @@
+<div>
+  <section class="w-100">
+    <form class="w-100 d-flex justify-content-end pe-2">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+        placeholder="Filter by city"
+        #filter
+      />
+      <button
+        class="primary"
+        type="button"
+        (click)="filterResults(filter.value)"
+      >
+        Search
+      </button>
+    </form>
+  </section>
+  <h4 class="w-100 text-center p-5" *ngIf="this.filteredLocationList.length === 0; elseBlock">
+    No Cities to show
+  </h4>
+  <section class="results">
+    <app-housing-location
+      *ngFor="let housingLocation of filteredLocationList"
+      [housingLocation]="housingLocation"
+      [baseUrl]="baseUrl"
+    ></app-housing-location>
+  </section>
+</div>

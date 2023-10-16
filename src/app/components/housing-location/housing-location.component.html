@@ -1,0 +1,16 @@
+<section class="listing shadow">
+  <img
+    class="listing-photo"
+    [src]="baseUrl + housingLocation.photo"
+    alt="Exterior photo of {{ housingLocation.name }}"
+  />
+  <h4 class="listing-heading">{{ housingLocation.name }}</h4>
+  <span class="listing-location">
+    {{ housingLocation.city }}, {{ housingLocation.state }}
+  </span>
+  <a
+    class="pt-4 nav-link text-primary font-weight-bolder"
+    [routerLink]="['/details', housingLocation.id]"
+    >Learn More</a
+  >
+</section>

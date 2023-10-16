@@ -1,0 +1,18 @@
+<div>
+  <app-add-todo-items (addTodo)="todoAdd($event)"></app-add-todo-items>
+  <h3 class="text-dark">Your Todos</h3>
+  <div *ngIf="this.todos.length === 0; elseBlock">No todos to show</div>
+  <div class="d-flex flex-wrap m-auto w-100 justify-content-center row">
+    <div
+      class="ps-2 pt-3 pb-3 col-sm-12 col-md-6 col-lg-4 col-xl-3"
+      *ngFor="let todo of todos; index as i"
+    >
+      <app-todo-items
+        [todo]="todo"
+        [i]="i"
+        (todoDelete)="deleteTodo($event)"
+        (todoDone)="doneTodo($event)"
+      ></app-todo-items>
+    </div>
+  </div>
+</div>

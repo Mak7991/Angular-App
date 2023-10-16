@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="d-flex mb-4 mt-3">
+        <span><a class="nav-link mt-2 me-2" routerLink="/movies">Back</a></span>
+        <h2>Movie Detail</h2>
+    </div>
+    <div *ngIf="movies" class="p-3 movie-detail-card shadow">
+        <h3>{{ movies.name }}</h3>
+        <h4>{{ movies.price | currency }}</h4>
+        <p>{{ movies.description }}</p>
+        <button type="button" class="btn btn-dark mt-2 ps-5 pe-5" (click)="addToCart(movies)">Buy</button>
+    </div>
+</div>

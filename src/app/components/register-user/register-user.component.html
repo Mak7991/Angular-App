@@ -1,0 +1,42 @@
+<div class="container w-100 d-flex align-items-center justify-content-center">
+  <div class="mx-auto col-sm-12 col-md-12 col-lg-6 shadow p-4 mt-5">
+    <h4 class="text-center">Register</h4>
+    <form class="row g-3 needs-validation" novalidate>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          name="email"
+          required
+          [(ngModel)]="registerUserData.email"
+        />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          name="password"
+          [(ngModel)]="registerUserData.password"
+          required
+        />
+      </div>
+      <div class="w-100 text-center">
+        <button
+          (click)="registerUser()"
+          type="submit"
+          class="btn btn-dark ps-4 pe-4 pt-2 pb-2"
+        >
+          Register
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
