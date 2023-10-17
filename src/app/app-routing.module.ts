@@ -10,7 +10,6 @@ import { DetailsComponent } from './components/details/details.component';
 import { LoginUserComponent } from './components/login-user/login-user.component';
 import { RegisterUserComponent } from './components/register-user/register-user.component';
 import { authGuard } from './auth.guard';
-import { FormComponent } from './components/form/form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/todo', pathMatch: 'full' },
@@ -32,7 +31,6 @@ const routes: Routes = [
   { path: 'shipping', component: ShippingComponent },
   { path: 'login', component: LoginUserComponent },
   { path: 'register', component: RegisterUserComponent },
-  {path: 'forms', component: FormComponent}
 ];
 
 @NgModule({

@@ -28,7 +28,7 @@ import { LoginUserComponent } from './components/login-user/login-user.component
 import { AuthService } from './services/auth.service';
 import { authGuard } from './auth.guard';
 import { TokenInterceptorService } from './services/token-interceptor.service';
-import { FormComponent } from './components/form/form.component';
+import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
 // Available options
 interface NgxSpinnerConfig {
   type?: string;
@@ -49,6 +49,7 @@ interface NgxSpinnerConfig {
     CartComponent,
     ShippingComponent,
     RegisterUserComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -58,8 +59,8 @@ interface NgxSpinnerConfig {
     HttpClientModule,
     BrowserAnimationsModule,
     NgxSpinnerModule.forRoot({ type: 'ball-scale-multiple' }),
-    FormComponent,
-    LoginUserComponent
+    LoginUserComponent,
+    SnackBarComponent
   ],
   providers: [
     {
